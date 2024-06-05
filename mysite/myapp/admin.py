@@ -1,8 +1,4 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
-from .models import Profile
+from .models import CustomUser  # Import your custom User model
 
-admin.site.register(Profile)
-
-# Register your models here.
-# admin.site.register(User)
+admin.site.register(CustomUser)  # Register your custom User model with the admin site

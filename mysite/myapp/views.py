@@ -42,7 +42,7 @@ def register_view(request):
             # Save user registration data to the database
             form.save()
             # Redirect user to login page or another page
-            return redirect('login')
+            return redirect('home')
     else:
         form = RegistrationForm()
     return render(request, 'register.html', {'form': form})
