@@ -275,7 +275,7 @@
         <div class="aa-catg-head-banner-content">
           <h2>Register Now!</h2>
           <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
             <li class="active">Account</li>
           </ol>
         </div>
@@ -294,7 +294,9 @@
               <div class="col-md-6">
                 <div class="aa-myaccount-login">
                   <h4>Login</h4>
-                  <form action="" class="aa-login-form">
+                  <form action="" class="aa-login-form" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
                     <label for="">Username or Email address<span>*</span></label>
                     <input type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
@@ -309,7 +311,9 @@
               <div class="col-md-6">
                 <div class="aa-myaccount-register">
                   <h4>Register</h4>
-                  <form action="" class="aa-login-form">
+                  <form action="" class="aa-login-form" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
                     <label for="">Username or Email address<span>*</span></label>
                     <input type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
