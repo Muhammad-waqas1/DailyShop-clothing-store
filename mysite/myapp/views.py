@@ -21,7 +21,7 @@ def contact(request):
 
 def wishlist(request):
     return render(request, 'wishlist.html')
-def error_404(request, exception):
+def Error_404(request):
     return render(request, '404.html')
 
 

@@ -285,7 +285,7 @@
               load properly. This can be checked quite easily by clicking on the ‘Refresh’ button in your browser or
               also by pressing the F5 button.
             </p>
-            <a href="#"> Go to Homepage</a>
+            <a href={% url "index" %}> Go to Homepage</a>
           </div>
         </div>
       </div>
@@ -413,8 +413,8 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4>Login or Register</h4>
           <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
-            <input type="text" placeholder="Username or email">
+            <label for="">Email address<span>*</span></label>
+            <input type="text" placeholder="Email">
             <label for="">Password<span>*</span></label>
             <input type="password" placeholder="Password">
             <button class="aa-browse-btn" type="submit">Login</button>
