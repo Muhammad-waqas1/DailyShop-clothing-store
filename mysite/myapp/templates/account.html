@@ -172,7 +172,7 @@
               <!-- logo  -->
               <div class="aa-logo">
                 <!-- Text based logo -->
-                <a href="index.html">
+                <a href="{% url 'index' %}">
                   <span class="fa fa-shopping-cart"></span>
                   <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                 </a>
@@ -297,8 +297,8 @@
                   <form action="{% url 'login/' %}" class="aa-login-form" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <label for="">Username or Email address<span>*</span></label>
-                        <input type="text" placeholder="Username or email">
+                    <label for="">Email<span>*</span></label>
+                        <input type="text" placeholder="Email">
                     <label for="">Password<span>*</span></label>
                         <input type="password" placeholder="Password">
                         <button type="submit" class="aa-browse-btn">Login</button>
@@ -314,8 +314,8 @@
                   <form action="{% url 'Sign_in_FormSubmit' %}" class="aa-login-form" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <label for="">Username or Email address<span>*</span></label>
-                        <input type="text" placeholder="Username or email" name="email" required>
+                    <label for="">Email<span>*</span></label>
+                        <input type="text" placeholder="Email" name="email" required>
                     <label for="">Password<span>*</span></label>
                         <input type="password" placeholder="Password" name="password" required>
                     <button type="submit" class="aa-browse-btn" name"register">Register</button>
@@ -409,7 +409,6 @@
         <div class="row">
           <div class="col-md-12">
             <div class="aa-footer-bottom-area">
-              <p>Designed by <a href="http://www.markups.io/">MarkUps.io</a></p>
               <div class="aa-footer-payment">
                 <span class="fa fa-cc-mastercard"></span>
                 <span class="fa fa-cc-visa"></span>
