@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
-from .forms import LoginForm, RegistrationForm
+from .forms import LoginForm
+from .forms import UserForm
 from .models import User
+from django.contrib import messages
 
 def index(request):
     return render(request, 'index.html')
@@ -35,14 +37,15 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
-def register_view(request):
+def Sign_in_FormSubmit(request):
     if request.method == 'POST':
-        form = RegistrationForm(request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
             # Save user registration data to the database
             form.save()
             # Redirect user to login page or another page
-            return redirect('home')
+            messages.success(request, 'Your account has been successfully registered.')
+            return redirect('index')
     else:
-        form = RegistrationForm()
+        form = UserForm()
     return render(request, 'register.html', {'form': form})

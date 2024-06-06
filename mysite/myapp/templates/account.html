@@ -294,14 +294,14 @@
               <div class="col-md-6">
                 <div class="aa-myaccount-login">
                   <h4>Login</h4>
-                  <form action="" class="aa-login-form" method="post">
+                  <form action="{% url 'login/' %}" class="aa-login-form" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <label for="">Username or Email address<span>*</span></label>
-                    <input type="text" placeholder="Username or email">
+                        <input type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
-                    <input type="password" placeholder="Password">
-                    <button type="submit" class="aa-browse-btn">Login</button>
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="aa-browse-btn">Login</button>
                     <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me
                     </label>
                     <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
@@ -311,14 +311,14 @@
               <div class="col-md-6">
                 <div class="aa-myaccount-register">
                   <h4>Register</h4>
-                  <form action="" class="aa-login-form" method="post">
+                  <form action="{% url 'Sign_in_FormSubmit' %}" class="aa-login-form" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <label for="">Username or Email address<span>*</span></label>
-                    <input type="text" placeholder="Username or email">
+                        <input type="text" placeholder="Username or email" name="email" required>
                     <label for="">Password<span>*</span></label>
-                    <input type="password" placeholder="Password">
-                    <button type="submit" class="aa-browse-btn">Register</button>
+                        <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit" class="aa-browse-btn" name"register">Register</button>
                   </form>
                 </div>
               </div>
