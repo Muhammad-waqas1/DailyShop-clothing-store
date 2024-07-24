@@ -84,7 +84,16 @@
     }
 
     .messages {
-      {% comment %} list-style: none; {% endcomment %}
+        {
+        % comment %
+      }
+
+      list-style: none;
+
+        {
+        % endcomment %
+      }
+
       padding: -5px;
       margin: 0px;
       position: fixed;
@@ -96,43 +105,49 @@
       font-size: 17px;
       z-index: 1000;
       background-color: rgb(255 171 171);
-      box-shadow: rgba(164, 164, 168, 0.1) 0px 4px 16px, rgba(139, 139, 146, 0.1) 0px 8px 24px, rgba(129, 129, 138, 0.1) 0px 16px 56px;
-  }
-  
-  .messages .alert {
+      box-shadow: rgba(164, 164, 168, 0.1) 0px 4px 16px,
+      rgba(139, 139, 146, 0.1) 0px 8px 24px,
+      rgba(129, 129, 138, 0.1) 0px 16px 56px;
+    }
+
+    .messages .alert {
       margin-bottom: 5px;
       padding: 5px;
       border: 1px solid transparent;
       border-radius: 4px;
       animation: slideDown 1s ease forwards;
-  }
-  
-  @keyframes slideDown {
+    }
+
+    @keyframes slideDown {
       0% {
-          transform: translateY(-100%);
+        transform: translateY(-100%);
       }
+
       50% {
-          transform: translateY(8%);
+        transform: translateY(8%);
       }
+
       65% {
-          transform: translateY(-4%);
+        transform: translateY(-4%);
       }
+
       80% {
-          transform: translateY(4%);
+        transform: translateY(4%);
       }
+
       95% {
-          transform: translateY(-2%);
+        transform: translateY(-2%);
       }
+
       100% {
-          transform: translateY(0%);
+        transform: translateY(0%);
       }
-  }
-  
-  .fade-out {
+    }
+
+    .fade-out {
       transition: opacity 0.5s ease-out;
       opacity: 0;
-  }
-  
+    }
   </style>
 
 </head>
@@ -150,8 +165,8 @@
 
   {% comment %} {% if messages %}
   <ul class="messages">
-      {% for message in messages %}
-      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
       {% endfor %}
   </ul>
   {% endif %} {% endcomment %}
@@ -357,6 +372,7 @@
         <div class="col-md-12">
           <div class="aa-promo-area">
             <div class="row">
+
               <!-- promo left -->
               <div class="col-md-5 no-padding">
                 <div class="aa-promo-left">
@@ -369,43 +385,46 @@
                   </div>
                 </div>
               </div>
-
               <!-- promo middle -->
 
-              <div class="col-md-7 no-padding">
-                <div class="aa-promo-right">
-                  <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">
-                      <img
-                        src="https://images.pexels.com/photos/1096849/pexels-photo-1096849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img">
-                      <div class="aa-prom-content">
-                        <span>Exclusive Item</span>
-                        <h4><a href="#">For Men</a></h4>
-                      </div>
+              <div class="col-md-5 no-padding">
+                <div class="aa-promo-left">
+                  <div class="aa-promo-banner">
+                    <img
+                      src="https://images.pexels.com/photos/1096849/pexels-photo-1096849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="img">
+                    <div class="aa-prom-content">
+                      <span>Exclusive Item</span>
+                      <h4><a href="#">For Men</a></h4>
                     </div>
                   </div>
+                </div>
+                </div>
 
-              <!-- promo right -->
-                  <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">
-                      <img
-                        src="https://images.pexels.com/photos/5693888/pexels-photo-5693888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img">
-                      <div class="aa-prom-content">
-                        <span>New Arrivals</span>
-                        <h4><a href="#">For Kids</a></h4>
+                <!-- promo right -->
+
+                <div class="col-md-7 no-padding">
+                  <div class="aa-promo-right">
+                    <div class="aa-single-promo-right">
+                      <div class="aa-promo-banner">
+                        <img
+                          src="https://images.pexels.com/photos/5693888/pexels-photo-5693888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="img">
+                        <div class="aa-prom-content">
+                          <span>New Arrivals</span>
+                          <h4><a href="#">For Kids</a></h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">
-                      <img
-                        src="https://images.pexels.com/photos/14867422/pexels-photo-14867422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img">
-                      <div class="aa-prom-content">
-                        <span>25% Off</span>
-                        <h4><a href="#">For Bags</a></h4>
+                    <div class="aa-single-promo-right">
+                      <div class="aa-promo-banner">
+                        <img
+                          src="https://images.pexels.com/photos/14867422/pexels-photo-14867422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="img">
+                        <div class="aa-prom-content">
+                          <span>25% Off</span>
+                          <h4><a href="#">For Bags</a></h4>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -415,7 +434,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
   <!-- / Promo section -->
   <!-- Products section -->
@@ -1655,22 +1673,22 @@
 
 
 
-{% comment %} 
+    {% comment %}
     // Hide messages after 5 seconds
     setTimeout(function () {
       var messages = document.querySelectorAll('.messages li');
       messages.forEach(function (message) {
-          message.classList.add('fade-out');
+        message.classList.add('fade-out');
       });
-  }, 3000);
+    }, 3000);
 
-  // Remove message from DOM after fade out transition
-  setTimeout(function () {
+    // Remove message from DOM after fade out transition
+    setTimeout(function () {
       var messages = document.querySelectorAll('.messages li');
       messages.forEach(function (message) {
-          message.style.display = 'none';
+        message.style.display = 'none';
       });
-  }, 3500);  // Wait for the fade-out transition to complete {% endcomment %}
+    }, 3500);  // Wait for the fade-out transition to complete {% endcomment %}
 
 
   </script>

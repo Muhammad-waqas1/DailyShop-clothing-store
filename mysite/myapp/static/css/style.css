@@ -906,13 +906,14 @@ img {
   background-color: #ddd;
 }
 #aa-promo .aa-promo-area .aa-promo-right {
-  display: inline;
+  display: flex;
+  flex-direction: column;
   float: left;
   width: 100%;
   height: 400px;
 }
 #aa-promo .aa-promo-area .aa-promo-right .aa-single-promo-right {
-  width: 50%;
+  /* width: 50%; */
   height: 50%;
   float: left;
 }
@@ -4184,3 +4185,14 @@ img {
   }
 }
 
+
+
+
+
+
+/* ----------  Modified Styling   -------- */
+
+#aa-promo .container .row{
+  display: flex;
+  gap: 4px;
+}
