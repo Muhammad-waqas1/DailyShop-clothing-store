@@ -407,10 +407,12 @@ img {
 
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-search-box {
   float: right;
-  margin-right: 5%;
+  margin-right: 21%;
   margin-top: 13px;
-  position: relative;
-  width: 500px;
+  /* position: relative; */
+  /* font-size: 25px; */
+  font-size: 25px;
+  font-weight: bold;
 }
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-search-box input[type="text"] {
   border: 1px solid #ddd;
