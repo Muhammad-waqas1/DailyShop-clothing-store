@@ -1,10 +1,5 @@
 ## DailyShop - Responsive Clothing Store Website
 
-
-
-
-
-
 This repository contains the source code for DailyShop, a responsive clothing store website.
 
 **Features:**
